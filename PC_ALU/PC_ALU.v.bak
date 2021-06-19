@@ -1,0 +1,8 @@
+module PC_ALU(input [11:0] PC,
+					output [11:0] PC_4);
+			
+			
+			
+	
+
+endmodule 

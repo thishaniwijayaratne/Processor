@@ -1,0 +1,11 @@
+module ALU(input clk, 
+				input in_1, 
+				input in_2, 
+				input op_code, 
+				output Z, 
+				output data_out);
+	
+	
+	
+
+endmodule
