@@ -29,20 +29,3 @@ module ALU(A_bus,B_bus,op,C_bus,Z);
 	endcase
 	end
 endmodule 
-		
-		
-		
-//module ALU(input [31:0] in_1, in_2,
-//				input [3:0] op_code, 
-//				outputreg [1:0] Z, 
-//				output [31:0] data_out);
-//				
-//	
-//	
-//	always @(in_1 or in_2 or op_code) 
-//		if (op_code == 4'b1010) begin //Add operation
-//			wire data_out = in_1 + in_2;
-//			wire Z = 1;
-//		end
-//
-//endmodule
