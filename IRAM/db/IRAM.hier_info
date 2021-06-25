@@ -1,0 +1,43 @@
+|IRAM
+clk => instr_out[0]~reg0.CLK
+clk => instr_out[1]~reg0.CLK
+clk => instr_out[2]~reg0.CLK
+clk => instr_out[3]~reg0.CLK
+clk => instr_out[4]~reg0.CLK
+clk => instr_out[5]~reg0.CLK
+clk => instr_out[6]~reg0.CLK
+clk => instr_out[7]~reg0.CLK
+clk => instr_out[8]~reg0.CLK
+clk => instr_out[9]~reg0.CLK
+clk => instr_out[10]~reg0.CLK
+clk => instr_out[11]~reg0.CLK
+clk => instr_out[12]~reg0.CLK
+clk => instr_out[13]~reg0.CLK
+clk => instr_out[14]~reg0.CLK
+clk => instr_out[15]~reg0.CLK
+clk => instr_out[16]~reg0.CLK
+clk => instr_out[17]~reg0.CLK
+clk => instr_out[18]~reg0.CLK
+clk => instr_out[19]~reg0.CLK
+instr_out[0] << instr_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[1] << instr_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[2] << instr_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[3] << instr_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[4] << instr_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[5] << instr_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[6] << instr_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[7] << instr_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[8] << instr_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[9] << instr_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[10] << instr_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[11] << instr_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[12] << instr_out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[13] << instr_out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[14] << instr_out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[15] << instr_out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[16] << instr_out[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[17] << instr_out[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[18] << instr_out[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+instr_out[19] << instr_out[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

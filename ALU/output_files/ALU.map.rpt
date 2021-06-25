@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Fri Jun 18 14:45:30 2021
+Mon Jun 21 17:30:22 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 18 14:45:30 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Jun 21 17:30:22 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ALU                                         ;
 ; Top-level Entity Name              ; ALU                                         ;
@@ -172,14 +172,14 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                              ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
-; ALU.v                            ; yes             ; User Verilog HDL File        ; D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU.v             ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File        ; D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU.v             ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                 ; e:/altera/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                 ; e:/altera/quartus/libraries/megafunctions/aglobal181.inc  ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; e:/altera/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                 ; e:/altera/quartus/libraries/megafunctions/multcore.inc    ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                 ; e:/altera/quartus/libraries/megafunctions/bypassff.inc    ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                 ; e:/altera/quartus/libraries/megafunctions/altshift.inc    ;         ;
-; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/db/mult_7dt.tdf   ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/db/mult_7dt.tdf   ;         ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
 
 
@@ -383,21 +383,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Jun 18 14:45:12 2021
+    Info: Processing started: Mon Jun 21 17:29:51 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_test.v
-    Info (12023): Found entity 1: ALU_test File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU_test.v Line: 7
+    Info (12023): Found entity 1: ALU_test File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU_test.v Line: 3
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(11): inferring latch(es) for variable "Z", which holds its previous value in one or more paths through the always construct File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU.v Line: 11
-Info (10041): Inferred latch for "Z" at ALU.v(11) File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(11): inferring latch(es) for variable "Z", which holds its previous value in one or more paths through the always construct File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU.v Line: 11
+Info (10041): Inferred latch for "Z" at ALU.v(11) File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU.v Line: 11
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU.v Line: 25
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU.v Line: 25
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU.v Line: 25
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU.v Line: 25
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU.v Line: 25
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU.v Line: 25
     Info (12134): Parameter "LPM_WIDTHA" = "32"
     Info (12134): Parameter "LPM_WIDTHB" = "32"
     Info (12134): Parameter "LPM_WIDTHP" = "64"
@@ -408,15 +408,15 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
-    Info (12023): Found entity 1: mult_7dt File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/db/mult_7dt.tdf Line: 30
+    Info (12023): Found entity 1: mult_7dt File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/db/mult_7dt.tdf Line: 30
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following DSP element node(s):
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7" File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/db/mult_7dt.tdf Line: 66
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8" File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/db/mult_7dt.tdf Line: 90
+        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7" File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/db/mult_7dt.tdf Line: 66
+        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8" File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/db/mult_7dt.tdf Line: 90
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
-Warning (13012): Latch Z$latch has unsafe behavior File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal op[0] File: D:/THISHANI/ACA/FPGA Work/PROCESSOR/ALU/ALU.v Line: 4
+Warning (13012): Latch Z$latch has unsafe behavior File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU.v Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal op[0] File: D:/THISHANI/ACA/FPGA_Work/PROCESSOR/ALU/ALU.v Line: 4
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -426,9 +426,9 @@ Info (21057): Implemented 291 device resources after synthesis - the final resou
     Info (21061): Implemented 184 logic cells
     Info (21062): Implemented 6 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Fri Jun 18 14:45:30 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Mon Jun 21 17:30:22 2021
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:01:13
 
 

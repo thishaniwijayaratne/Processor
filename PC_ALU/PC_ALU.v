@@ -4,6 +4,6 @@ module PC_ALU(PC, PC_4);
 	
 	
 	always @(PC)begin
-		PC_4 = PC + 12'b100;
+		PC_4 = PC + 12'b1;
 	end
 endmodule 

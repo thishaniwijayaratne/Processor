@@ -1,0 +1,30 @@
+module IRAM(input clk,
+				input write_en,
+				input [] addr,
+				input instruction_in,
+				output reg [19:0] instr_out);
+				
+	reg [19:0] ram [99:0];
+	
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	parameter fetch = 4'd01;
+	
+	
+	
+
+reg [20:0]ram
+
+endmodule 
