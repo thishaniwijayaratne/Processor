@@ -1,8 +1,8 @@
-module control(clk, z, instruction, alu_en, M1,M2,M3,M4,rpa,rpb,wpn,rst_en,write_en);
+module control(clk, z, instruction, alu_en, M1,M2,M3,M4,rpa,rpb,wpn,rst_en,write_en,alpha,write_dram);
 
 input clk;
 input z;
-input [35:0] instruction;  //instruction lenght to be decided
+input [19:0] instruction;  //instruction lenght to be decided
 output reg [1:0] alu_en;
 output reg [1:0] M1;
 output reg M2;
@@ -13,6 +13,8 @@ output reg [4:0]rpb;
 output reg [4:0]wpn;
 output reg rst_en;
 output reg write_en;
+output reg alpha[5:0];
+output reg write_dram;
 
 
 integer present = 5'd1;
@@ -48,29 +50,29 @@ always @(posedge clk)begin
 
 
 if(present == next_instruction)begin
-if(instruction[4:0] == 4'b0010) 
+if(instruction[19:16] == 4'b0010) 
            present = rst;        
-else if(instruction[4:0] == 4'b0011)
+else if(instruction[19:16] == 4'b0011)
            present = write; 
-else if(instruction[4:0] == 4'b0100)
+else if(instruction[19:16] == 4'b0100)
            present = loadI1;
-else if(instruction[4:0] == 4'b0101)
+else if(instruction[19:16] == 4'b0101)
            present = mul;
-else if(instruction[4:0] == 4'b0110)
+else if(instruction[19:16] == 4'b0110)
            present = load1;
-else if(instruction[4:0] == 4'b0111)
+else if(instruction[19:16] == 4'b0111)
            present = mv;
-else if(instruction[4:0] == 4'b1000)
+else if(instruction[19:16] == 4'b1000)
            present = add;
-else if(instruction[4:0] == 4'b1001)
+else if(instruction[19:16] == 4'b1001)
            present = inc1;
-else if(instruction[4:0] == 4'b1010)
+else if(instruction[19:16] == 4'b1010)
            present = sub;
-else if(instruction[4:0] == 4'b1011)
+else if(instruction[19:16] == 4'b1011)
            present = jmpz;
-else if(instruction[4:0] == 4'b1100)
+else if(instruction[19:16] == 4'b1100)
            present = jmp;
-else if(instruction[4:0] == 4'b1101)
+else if(instruction[19:16] == 4'b1101)
            present = store1;
 else
            present = present0;
@@ -100,8 +102,8 @@ end
 
 write : begin
 write_en <= 1;
-wpn <= instruction[9:4];
-M1 <= instruction[25:9];
+wpn <= instruction[15:12];
+M1 <= instruction[11:0];
 present = fetch1;
 end
 
@@ -119,39 +121,41 @@ end
 loadI3 :begin
 M1 = 2'b01;
 write_en = 1;
-wpn = instruction[9:4];
+wpn = instruction[15:12];
 present = fetch1;
 end
 
 mul :begin
 alu_en <= 2'b11;
-rpa <= instruction[9:4];
-rpb <= instruction[14:9];
+rpa <= instruction[15:12];
+rpb <= instruction[11:8];
 present = fetch1;
 end
 
 add :begin
 alu_en <= 2'b01;
-rpa <= instruction[9:4];
-rpb <= instruction[14:9];
+rpa <= instruction[15:12];
+rpb <= instruction[11:8];
 present = fetch1;
 end
 
 sub :begin
 alu_en <= 2'b10;
-rpa <= instruction[9:4];
-rpb <= instruction[14:9];
+rpa <= instruction[15:12];
+rpb <= instruction[11:8];
 present = fetch1;
 end
 
 jmpz : begin
 if(z==0)begin
+     alpha <= instruction[4:10];
      M3 <= 2'b10;
 end
 present = fetch1;
 end
 
 jmp :begin
+alpha <= instruction[15:10];
 M3<=2'b10;
 present =fetch1;
 end
@@ -162,28 +166,29 @@ present =store2;
 end
 
 store2 : begin
-rpb <= instruction[9:4];
+rpb <= instruction[15:12];
 M2 <= 1'b0;
+write_dram <= 1;
 present = fetch1;
 end
 
 inc1 : begin
-rpa <=instruction[9:4];
-rpb <=5'b01111;
+rpa <=instruction[15:12];
+rpb <=5'b1111;
 alu_en <= 2'b01;
 present = inc2;
 end
 
 inc2 : begin
 M1 <=2'b11;
-wpn <= instruction[9:4];
+wpn <= instruction[15:12];
 write_en <=1;
 present = fetch1;
 end
 
 load1 : begin
 M4 <=1;
-rpa <= instruction[14:9];
+rpa <= instruction[15:12];
 write_en <=1;
 present = load2;
 end
