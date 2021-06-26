@@ -1,0 +1,57 @@
+# Reading E:/Altera/ModelSim/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do DRAM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying E:/Altera/ModelSim/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/PROCESSOR/DRAM {D:/THISHANI/ACA/FPGA_Work/PROCESSOR/DRAM/DRAM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:03:36 on Jun 26,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/THISHANI/ACA/FPGA_Work/PROCESSOR/DRAM" D:/THISHANI/ACA/FPGA_Work/PROCESSOR/DRAM/DRAM.v 
+# -- Compiling module DRAM
+# 
+# Top level modules:
+# 	DRAM
+# End time: 12:03:36 on Jun 26,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work D:/THISHANI/ACA/FPGA_Work/PROCESSOR/DRAM/DRAM_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:03:49 on Jun 26,2021
+# vlog -reportprogress 300 -work work D:/THISHANI/ACA/FPGA_Work/PROCESSOR/DRAM/DRAM_tb.v 
+# -- Compiling module DRAM_tb
+# 
+# Top level modules:
+# 	DRAM_tb
+# End time: 12:03:49 on Jun 26,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.DRAM_tb
+# vsim work.DRAM_tb 
+# Start time: 12:04:01 on Jun 26,2021
+# Loading work.DRAM_tb
+# Loading work.DRAM
+add wave -position end  sim:/DRAM_tb/data
+add wave -position end  sim:/DRAM_tb/addr
+add wave -position end  sim:/DRAM_tb/we
+add wave -position end  sim:/DRAM_tb/clk
+add wave -position end  sim:/DRAM_tb/q
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 12:50:09 on Jun 26,2021, Elapsed time: 0:46:08
+# Errors: 0, Warnings: 0
