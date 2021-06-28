@@ -1,4 +1,4 @@
-module control(clk, z, instruction, alu_en, M1,M2,M3,M4,rpa,rpb,wpn,rst_en,write_en,alpha,write_dram);
+module control(clk, z, instruction, alu_en, M1,M2,M3,M4,rpa,rpb,wpn,rst_en,write_en,alpha,gamma,write_dram);
 
 input clk;
 input z;
@@ -8,12 +8,13 @@ output reg [1:0] M1;
 output reg M2;
 output reg [1:0] M3;
 output reg M4;
-output reg [4:0]rpa;
-output reg [4:0]rpb;
-output reg [4:0]wpn;
+output reg [3:0]rpa;
+output reg [3:0]rpb;
+output reg [3:0]wpn;
 output reg rst_en;
 output reg write_en;
-output reg alpha[5:0];
+output reg gamma[5:0];
+output reg alpha[11:0];
 output reg write_dram;
 
 
@@ -97,6 +98,7 @@ end
 
 rst : begin
 rst_en = 1  ;
+wpn <= instruction[15:12];
 present = fetch1;
 end
 
@@ -108,6 +110,7 @@ present = fetch1;
 end
 
 loadI1 : begin
+alpha <= instruction[11:0];
 M4 = 1'b0;
 present = loadI2;
 end
@@ -148,20 +151,21 @@ end
 
 jmpz : begin
 if(z==0)begin
-     alpha <= instruction[4:10];
+     gamma <= instruction[15:10];
      M3 <= 2'b10;
 end
 present = fetch1;
 end
 
 jmp :begin
-alpha <= instruction[15:10];
+gamma <= instruction[15:10];
 M3<=2'b10;
 present =fetch1;
 end
 
 store1 : begin
 M4 <= 1'b1;
+rpa <= instruction[11:8];
 present =store2;
 end
 
@@ -174,7 +178,7 @@ end
 
 inc1 : begin
 rpa <=instruction[15:12];
-rpb <=5'b1111;
+rpb <=4'b1111;
 alu_en <= 2'b01;
 present = inc2;
 end
@@ -208,7 +212,7 @@ end
 
 mv : begin
 M1 <= 2'b11;
-wpn <= instruction[9:4];
+wpn <= instruction[15:12];
 write_en <=1;
 present = fetch1;
 end
