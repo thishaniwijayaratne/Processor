@@ -24,8 +24,34 @@ module SINGLE_CORE_PROCESSOR(
 	wire [31:0] ALU_out;
 	wire Z;
 	
+	
+//	Control Unit
+	wire [5:0] IR_out;
+	wire M1;
+	wire M2;
+	wire M3;
+	wire M4;
+	wire [11:0] alpha;
+	wire [5:0] gamma;
+	
+//	PC 
+	wire [5:0] PC_in;
+	
+//	PC ALU
+	wire [5:0] PC_ALU_out;
+	
+//	AC
+	wire [31:0] AC_out;
+	
+//	AR
+	wire [11:0] AR_in;
+	
+//	DR
+	wire [31:0] DR_in;
+	wire [31:0] DR_out;
+	
 //	REGISTER FILE
-	regfile (
+	regfile Reg_File(
 					.rpa(RPA), 
 					.rpb(RPB), 
 					.din(Data_in) ,

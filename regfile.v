@@ -17,15 +17,17 @@ module regfile
 	input we,rst; // write / reset enable
 	input clk; // clock
 	output [31:0] douta, doutb; // read ports A and B
-	reg [31:0] register [0:15]; // 16 32-bit registers
+	reg [31:0] register [15:0]; // 16 32-bit registers
 	
-	assign register[15] =  32'd1;
+	
 	assign douta = (rpa == 0)? 0 : register[rpa]; // read port A
 	assign doutb = (rpb == 0)? 0 : register[rpb]; // read port B
 	
-	always @(posedge clk && (wp!=0)) // write port
+	always @(posedge clk && (wp!=0)) begin // write port
+		register[15] = 32'd1;
 		if (rst)
 			register[wp] <= 32'd0; // reset
 		else if (we) // not reg[0] & enabled
 			register[wp] <= din; // write d to reg[wn]
+	end
 endmodule
