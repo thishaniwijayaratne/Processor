@@ -3,10 +3,26 @@ module SINGLE_CORE_PROCESSOR(
 	input wire [31:0] Data,
 	input wire clk,
 	
-	output reg [5:0] PC_out,
-	output reg [11:0] AR_out,
+	output wire [5:0] PC_out,
+	output wire [11:0] AR_out,
 	output wire DRAM_we
 );
+
+//	Declaring All the wires
+//	Register File
+	wire [3:0] RPA;
+	wire [3:0] RPB;
+	wire [31:0] Data_in;
+	wire [3:0] WPN;
+	wire Reg_write_en;
+	wire Reg_rst_en;
+	wire [31:0] douta;
+	wire [31:0] doutb;
+
+//	ALU MAIN
+	wire [3:0] op;
+	wire [31:0] ALU_out;
+	wire Z;
 	
 //	REGISTER FILE
 	regfile (

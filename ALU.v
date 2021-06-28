@@ -1,11 +1,11 @@
 module ALU(A_bus,B_bus,op,C_bus,Z);
 
-	input [31:0] A_bus;
-	input [31:0] B_bus;
-	input [3:0] op;
-	output[31:0] C_bus;
+	input wire [31:0] A_bus;
+	input wire [31:0] B_bus;
+	input wire [3:0] op;
+	output reg [31:0] C_bus;
 	output reg Z=0;
-	reg [31:0] C_bus;
+//	wire [31:0] C_bus;
 
 	parameter ADD=4'b1010, SUB=4'b1011, MUL=4'b1100;
 	
