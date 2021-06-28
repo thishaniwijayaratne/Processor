@@ -33,23 +33,43 @@ if (p<=1024 and q<=1024):#size check
                 
 #print(Out_M1)
 #print(Out_M2)
+    
+    
     textfile1 = open("1st_mat_file.txt", "w")
     for element in Out_M1:
+        L1=''
         for digit in str(element):
-            textfile1. write(str(digit) + "_")
+            L1=L1+(str(digit) + "_")
+        textfile1. write(L1[0:63])
         textfile1. write("\n")
+        L1=''
     textfile1. close()
     textfile2 = open("2st_mat_file.txt", "w")
     for element in Out_M2:
+        L2=''
         for digit in str(element):
-            textfile2. write(str(digit) + "_")
+            L2=L2+(str(digit) + "_")
+        textfile2. write(L2[0:63])
         textfile2. write("\n")
+        L2=''
     textfile2. close()
     
     textfile3 = open("3st_mat_file.txt", "w")
-    textfile3. write(str(R1) + "\n")
-    textfile3. write(str(C1) + "\n")
-    textfile3. write(str(C2) + "\n")
+    L3=''
+    for digit in str('{:032b}'.format(R1)):
+        L3=L3+(str(digit) + "_")
+    textfile3. write(L3[0:63])
+    textfile3. write("\n")
+    L3=''
+    for digit in str('{:032b}'.format(C1)):
+        L3=L3+(str(digit) + "_")
+    textfile3. write(L3[0:63])
+    textfile3. write("\n")
+    for digit in str('{:032b}'.format(C1)):
+        L3=L3+(str(digit) + "_")
+    textfile3. write(L3[0:63])
+    textfile3. write("\n")
+    L3=''
     textfile3. close()
     
 else:
