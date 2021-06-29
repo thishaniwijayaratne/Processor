@@ -1,11 +1,13 @@
 module SINGLE_CORE_PROCESSOR(
+	
 	input wire [19:0] Instruction,
 	input wire [31:0] Data,
 	input wire clk,
 	
 	output wire [5:0] PC_out,
 	output wire [11:0] AR_out,
-	output wire DRAM_we
+	output wire DRAM_we,
+	output wire [31:0] DR_out
 );
 
 //	Declaring All the wires
@@ -48,7 +50,6 @@ module SINGLE_CORE_PROCESSOR(
 	
 //	DR
 	wire [31:0] DR_in;
-	wire [31:0] DR_out;
 	
 //	REGISTER FILE
 	regfile Reg_File(
@@ -107,8 +108,8 @@ module SINGLE_CORE_PROCESSOR(
 	
 //	PC 2->1  MUX	
 	mux2to1 M3_mux(
-					.dina(gamma),
-					.dinb(PC_ALU_out), 
+					.dina(PC_ALU_out),
+					.dinb(gamma), 
 					.s(M3), 
 					.dout(PC_in));
 	
@@ -141,8 +142,8 @@ module SINGLE_CORE_PROCESSOR(
 													.dout(AR_out));
 //	DR 2->1  MUX	
 	mux2to1 M2_mux(
-					.dina(Data),
-					.dinb(douta), 
+					.dina(douta),
+					.dinb(Data), 
 					.s(M2), 
 					.dout(DR_in));
 
@@ -155,8 +156,8 @@ module SINGLE_CORE_PROCESSOR(
 													
 //	DR 3->1  MUX	
 	mux3to1 M1_mux(
-						.dina(alpha),
-						.dinb(DR_out),
+						.dina(DR_out),
+						.dinb(alpha),
 						.dinc(AC_out),
 						.s(M1),
 						.dout(Data_in));
