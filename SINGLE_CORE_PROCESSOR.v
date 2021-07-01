@@ -7,7 +7,8 @@ module SINGLE_CORE_PROCESSOR(
 	output wire [5:0] PC_out,
 	output wire [11:0] AR_out,
 	output wire DRAM_we,
-	output wire [31:0] DR_out
+	output wire [31:0] DR_out,
+	output wire End
 );
 
 //	Declaring All the wires
@@ -61,7 +62,8 @@ module SINGLE_CORE_PROCESSOR(
 					.clk(clk), 
 					.rst(Reg_rst_en), 
 					.douta(douta), 
-					.doutb(doutb));
+					.doutb(doutb)
+					);
 	
 //	ALU
 	ALU ALU_main(
@@ -89,7 +91,8 @@ module SINGLE_CORE_PROCESSOR(
 									.write_en(Reg_write_en),
 									.alpha(alpha),
 									.gamma(gamma),
-									.write_dram(DRAM_we)
+									.write_dram(DRAM_we),
+									.End(End)
 								);
 								
 //	PC Register

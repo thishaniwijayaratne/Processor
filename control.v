@@ -1,4 +1,4 @@
-module control(clk, z, instruction, alu_en, M1,M2,M3,M4,rpa,rpb,wpn,rst_en,write_en,alpha,gamma,write_dram);
+module control(clk, z, instruction, alu_en, M1,M2,M3,M4,rpa,rpb,wpn,rst_en,write_en,alpha,gamma,write_dram,End);
 
 input clk;
 input z;
@@ -16,6 +16,7 @@ output reg write_en;
 output reg [5:0] gamma;
 output reg [11:0] alpha;
 output reg write_dram;
+output reg End = 0;
 
 
 integer present = 5'd1;
@@ -43,6 +44,7 @@ parameter load3  = 5'd18;
 parameter mv     = 5'd19;
 parameter write  = 5'd20;
 parameter next_instruction = 5'd30;
+parameter End1 = 5'd21;
 
 
 always @(posedge clk)begin
@@ -75,6 +77,8 @@ else if(instruction[19:16] == 4'b1100)
            present = jmp;
 else if(instruction[19:16] == 4'b1101)
            present = store1;
+else if(instruction[19:16] == 4'b1110)
+           present = End1;
 else
            present = present0;
 
@@ -217,9 +221,14 @@ write_en <=1;
 present = fetch1;
 end
 
+End1: begin
+End = 1'b1;
+end
+
 next_instruction:begin
 alu_en <=2'b01;
 end
+
 
 default:begin
 M3 <=2'b11;
