@@ -1,0 +1,280 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/THISHANI/ACA/FPGA_Work/Single_Core/simulation/modelsim
+vALU
+Z1 !s110 1625160605
+!i10b 1
+!s100 Udc[_OEW1WnDm^]5R[<VC0
+I1[eC84o_mgIOZn?]ao?gc0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1625138018
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/ALU.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/ALU.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1625160605.000000
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/ALU.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core
+Z7 tCvgOpt 0
+n@a@l@u
+vcontrol
+R1
+!i10b 1
+!s100 7P>P^PM93kBdUFg13^GZE3
+IS?o[D@9O:FYDF?XJbZgJ:2
+R2
+R0
+w1625137904
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/control.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/control.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/control.v|
+!i113 1
+R5
+R6
+R7
+vDRAM
+!s110 1625160677
+!i10b 1
+!s100 5:G23N_[Vm1nVYfUoLEzf1
+I2a;E45jEiU_1Qa[z<XCkj3
+R2
+R0
+w1625160666
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/DRAM.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/DRAM.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1625160677.000000
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/DRAM.v|
+!s90 -reportprogress|300|-work|work|D:/THISHANI/ACA/FPGA_Work/Single_Core/DRAM.v|
+!i113 1
+Z8 o-work work
+R7
+n@d@r@a@m
+vIRAM
+R1
+!i10b 1
+!s100 _WYFCIl4cQb4@NRV>b:lg3
+Izc8dYBe^b_m@YmAQbi9>02
+R2
+R0
+w1625137917
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/IRAM.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/IRAM.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/IRAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/IRAM.v|
+!i113 1
+R5
+R6
+R7
+n@i@r@a@m
+vmux2to1
+R1
+!i10b 1
+!s100 TiCDZHDW5n9mhUX9ToDjU0
+IBHAQ9FCeAY8GIdHV69RUm1
+R2
+R0
+w1625137954
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/mux2to1.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/mux2to1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/mux2to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/mux2to1.v|
+!i113 1
+R5
+R6
+R7
+vmux3to1
+R1
+!i10b 1
+!s100 f;^j^=CRgRA4_CW<bT06Q3
+IbQoKkgALmo4>b4G=jk]m=3
+R2
+R0
+w1625138051
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/mux3to1.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/mux3to1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/mux3to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/mux3to1.v|
+!i113 1
+R5
+R6
+R7
+vPC_ALU
+R1
+!i10b 1
+!s100 0Q?USdM_Y]eRQ2MOMTHVJ2
+IOYTZkoClCU@>^;2OOW=YC2
+R2
+R0
+w1625137970
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/PC_ALU.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/PC_ALU.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/PC_ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/PC_ALU.v|
+!i113 1
+R5
+R6
+R7
+n@p@c_@a@l@u
+vregfile
+R1
+!i10b 1
+!s100 :Vk_aN_z5i>nK]>7Aobki2
+I9zGzjegdJo8eNG_0d2zOZ2
+R2
+R0
+w1625138035
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/regfile.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/regfile.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/regfile.v|
+!i113 1
+R5
+R6
+R7
+vREGISTER
+R1
+!i10b 1
+!s100 ?Kn9;CZ[?=WBBePW4m0M;0
+Im3:ULTL9I]eLezib6@cOZ2
+R2
+R0
+w1625137984
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/REGISTER.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/REGISTER.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/REGISTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/REGISTER.v|
+!i113 1
+R5
+R6
+R7
+n@r@e@g@i@s@t@e@r
+vSINGLE_CORE_PROCESSOR
+Z9 !s110 1625160606
+!i10b 1
+!s100 1:gK<X7:9HVmY]BJ[PMP?3
+INJS1G[G3Db=AP;SX4[Q?03
+R2
+R0
+w1625160553
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/SINGLE_CORE_PROCESSOR.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/SINGLE_CORE_PROCESSOR.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/SINGLE_CORE_PROCESSOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/SINGLE_CORE_PROCESSOR.v|
+!i113 1
+R5
+R6
+R7
+n@s@i@n@g@l@e_@c@o@r@e_@p@r@o@c@e@s@s@o@r
+vTop_Level_Module
+R9
+!i10b 1
+!s100 MjdYlHXW`[NbYbDa?WU1j2
+IMZKYh;nfW`KO6Hn6Ob2JR0
+R2
+R0
+w1625138395
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/Top_Level_Module.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/Top_Level_Module.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1625160606.000000
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/Top_Level_Module.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/THISHANI/ACA/FPGA_Work/Single_Core|D:/THISHANI/ACA/FPGA_Work/Single_Core/Top_Level_Module.v|
+!i113 1
+R5
+R6
+R7
+n@top_@level_@module
+vTop_Level_tb
+!s110 1625160764
+!i10b 1
+!s100 lN^J8>>;PcmeYG5D1G89`3
+IiDj[`JgTEM?TFTLdR^SK@2
+R2
+R0
+w1625160708
+8D:/THISHANI/ACA/FPGA_Work/Single_Core/Top_Level_tb.v
+FD:/THISHANI/ACA/FPGA_Work/Single_Core/Top_Level_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1625160764.000000
+!s107 D:/THISHANI/ACA/FPGA_Work/Single_Core/Top_Level_tb.v|
+!s90 -reportprogress|300|-work|work|D:/THISHANI/ACA/FPGA_Work/Single_Core/Top_Level_tb.v|
+!i113 1
+R8
+R7
+n@top_@level_tb
