@@ -3,10 +3,12 @@ module REGISTER
 	(
 		input [width-1:0] din, // input
 		input clk,
-		output reg [width-1:0] dout // output 
+		output wire [width-1:0] dout // output 
 	);
 	
 	reg [width-1:0] space;
+//	initial
+//		space = 32'b0;
 	
 	always @(posedge clk) begin
 		space <= din;

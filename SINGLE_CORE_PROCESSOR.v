@@ -29,8 +29,8 @@ module SINGLE_CORE_PROCESSOR(
 	
 	
 //	Control Unit
-	wire [5:0] IR_out;
-	wire M1;
+	wire [19:0] IR_out;
+	wire [1:0] M1;
 	wire M2;
 	wire M3;
 	wire M4;
@@ -110,14 +110,18 @@ module SINGLE_CORE_PROCESSOR(
 							.PC_1(PC_ALU_out));
 	
 //	PC 2->1  MUX	
-	mux2to1 M3_mux(
+	parameter M3_MUX_width = 6;
+	
+	mux2to1 
+	#(.width(M3_MUX_width))
+	M3_mux(
 					.dina(PC_ALU_out),
 					.dinb(gamma), 
 					.s(M3), 
 					.dout(PC_in));
 	
 //	IR
-	parameter IR_width = 12;
+	parameter IR_width = 20;
 	REGISTER #(.width(IR_width)) IR (
 													.din(Instruction),
 													.clk(clk),

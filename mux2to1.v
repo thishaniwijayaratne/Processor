@@ -10,6 +10,6 @@ module mux2to1
 	input s; // input, 1 bit
 	output [width-1:0] dout; // output, 32 bits
 	
-	assign dout = s ? dina : dinb; 
+	assign dout = (s) ? dinb : dina; 
 
 	endmodule

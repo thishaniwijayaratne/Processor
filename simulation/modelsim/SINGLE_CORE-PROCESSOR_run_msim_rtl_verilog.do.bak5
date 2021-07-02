@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR {D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR/control.v}
+vlog -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR {D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR/mux2to1.v}
+vlog -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR {D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR/PC_ALU.v}
+vlog -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR {D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR/REGISTER.v}
+vlog -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR {D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR/SINGLE_CORE_PROCESSOR.v}
+vlog -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR {D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR/ALU.v}
+vlog -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR {D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR/regfile.v}
+vlog -vlog01compat -work work +incdir+D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR {D:/THISHANI/ACA/FPGA_Work/SINGLE_CORE-PROCESSOR/mux3to1.v}
+

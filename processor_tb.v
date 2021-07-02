@@ -1,6 +1,6 @@
 module processor_tb();
 
-    reg [19:0] Instruction;
+   reg [19:0] Instruction;
 	reg [31:0] Data;
 	reg clk;
 	wire [5:0] PC_out;
@@ -25,7 +25,7 @@ module processor_tb();
 
 	initial begin
 		Instruction = 20'b00110001000000000000;
-	    Data = 32'b0;	
+	   Data = 32'b0;	
 		#100;
 
 		Instruction = 20'b00110010010000000000;

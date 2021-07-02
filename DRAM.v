@@ -10,13 +10,7 @@ module DRAM
 	
 	reg [11:0] addr_reg;
 	integer outfile, i, Flag = 0;
-	
-//	initial 
-//		$readmemh("last.txt",ram,0);
-//	initial
-//		outfile=$fopen("A_write_dec.txt","w");
-		//$readmemh("2st_mat_file.txt",ram,1024);
-		//$readmemh("3st_mat_file.txt",ram,2048 );
+
 	
 	always @ (posedge clk)
 	begin
@@ -46,3 +40,12 @@ module DRAM
 	assign q = ram[addr_reg];
 	
 endmodule
+
+
+	
+//	initial 
+//		$readmemh("last.txt",ram,0);
+//	initial
+//		outfile=$fopen("A_write_dec.txt","w");
+		//$readmemh("2st_mat_file.txt",ram,1024);
+		//$readmemh("3st_mat_file.txt",ram,2048 );

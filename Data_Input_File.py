@@ -21,7 +21,12 @@ if (p<=1024 and q<=1024):#size check
             else:
                 print ('wrong input')
                 break
+    while len(Out_M1)<1024:
+        Out_M1.append(0)
+        
+        
     
+        
 
     for i in range(C2):
         for k in range(R2):
@@ -30,16 +35,20 @@ if (p<=1024 and q<=1024):#size check
             else:
                 print ('wrong input')
                 break
-                
-#print(Out_M1)
-#print(Out_M2)
-    textfile1 = open("1st_mat_file.txt", "w")
-    for element in Out_M1:
-        textfile1. write(str(element) + "_")
+    while len(Out_M2)<2048:
+        Out_M2.append(0)
+    L=Out_M1+Out_M2            
+    #print(len(L))
+    
+    
+    textfile1 = open("last.txt", "w")
+    for element in L:
+        
+        textfile1. write('%d\n' % element)
+    textfile1. write('%d\n' % R1)
+    textfile1. write('%d\n' % C1)
+    textfile1. write('%d\n' % C2)
     textfile1. close()
-    textfile2 = open("2st_mat_file.txt", "w")
-    for element in Out_M2:
-        textfile2. write(str(element) + "_")
-    textfile2. close()
+    
 else:
     print('Matrix is too large')

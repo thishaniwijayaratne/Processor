@@ -1,5 +1,6 @@
 module Top_Level_Module(
 	input clk
+//	input BEGIN
 );
 
 //	Core Wires
@@ -18,6 +19,7 @@ module Top_Level_Module(
 	.Instruction(Instr),	
 	.Data(Data),
 	.clk(clk),
+//	.BEGIN(BEGIN),
 	
 	.PC_out(PC_out),
 	.AR_out(AR_out),

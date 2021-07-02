@@ -6,7 +6,7 @@ input [19:0] instruction;  //instruction lenght to be decided
 output reg [1:0] alu_en;
 output reg [1:0] M1;
 output reg M2;
-output reg [1:0] M3;
+output reg M3;
 output reg M4;
 output reg [3:0]rpa;
 output reg [3:0]rpb;
@@ -19,7 +19,7 @@ output reg write_dram;
 output reg End = 0;
 
 
-integer present = 5'd1;
+integer present = 5'd20;
 
 
 parameter present0 = 5'd0;
@@ -45,6 +45,16 @@ parameter mv     = 5'd19;
 parameter write  = 5'd20;
 parameter next_instruction = 5'd30;
 parameter End1 = 5'd21;
+
+integer checks = 0 ;
+
+
+initial begin
+	gamma = 6'b0;
+	M3 = 1'b1;
+
+end 
+
 
 
 always @(posedge clk)begin
@@ -95,7 +105,7 @@ present = fetch2;
 end
 
 fetch2 : begin
-M3 = 2'b01;
+M3 = 1'b0;
 present=next_instruction;
 end
 
@@ -109,7 +119,8 @@ end
 write : begin
 write_en <= 1;
 wpn <= instruction[15:12];
-M1 <= instruction[11:0];
+alpha <= instruction[11:0];
+M1 <= 2'b10;
 present = fetch1;
 end
 
@@ -156,14 +167,14 @@ end
 jmpz : begin
 if(z==0)begin
      gamma <= instruction[15:10];
-     M3 <= 2'b10;
+     M3 <= 1'b1;
 end
 present = fetch1;
 end
 
 jmp :begin
 gamma <= instruction[15:10];
-M3<=2'b10;
+M3<=1'b1;
 present =fetch1;
 end
 
@@ -196,8 +207,7 @@ end
 
 load1 : begin
 M4 <=1;
-rpa <= instruction[15:12];
-write_en <=1;
+rpa <= instruction[11:8];
 present = load2;
 end
 
@@ -209,7 +219,7 @@ end
 
 load3 : begin
 M1 <= 2'b01;
-wpn <= instruction[9:4];
+wpn <= instruction[15:12];
 write_en <=1;
 present = fetch1;
 end
@@ -231,7 +241,9 @@ end
 
 
 default:begin
-M3 <=2'b11;
+//M3 <=2'b1;
+checks = 1;
+
 end
 endcase
 
