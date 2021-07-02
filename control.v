@@ -52,6 +52,7 @@ integer checks = 0 ;
 initial begin
 	gamma = 6'b0;
 	M3 = 1'b1;
+	write_en = 1'b0;
 
 end 
 

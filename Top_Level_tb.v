@@ -16,7 +16,7 @@ module Top_Level_tb();
     );
 
     initial begin
-        repeat (6) @(posedge clk);
+        repeat (8) @(posedge clk);
         $stop; 
     end
 
