@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at control.v(50): always construct contains both blocking and non-blocking assignments File: D:/THISHANI/ACA/FPGA_Work/Single_Core/control.v Line: 50
-Warning (10268): Verilog HDL information at regfile.v(26): always construct contains both blocking and non-blocking assignments File: D:/THISHANI/ACA/FPGA_Work/Single_Core/regfile.v Line: 26
