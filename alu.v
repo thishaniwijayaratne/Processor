@@ -17,10 +17,12 @@ module alu(
 	always@(op or A_bus or B_bus)
 	begin
 	case (op)
+	
 		ADD: begin 
 				C_bus = A_bus + B_bus;
 				Z = 0;
 			end
+			
 		SUB: begin
 				C_bus = A_bus - B_bus;
 				Z = (C_bus > 0) ? 1'b0 : 1'b1;

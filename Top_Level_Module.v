@@ -93,6 +93,11 @@ module Top_Level_Module(
 	DRAM DRAM(
 		.clk(clk),
 
+		.End_core0(End_core0),
+		.End_core1(End_core1),
+		.End_core2(End_core2),
+		.End_core3(End_core2),
+
 		.dataIn_0(DR0_out),
 		.addr_0(AR0_out),
 		.we_0(W_EN0),

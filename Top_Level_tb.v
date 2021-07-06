@@ -20,7 +20,7 @@ module Top_Level_tb();
 	    // repeat (1506) //ID=0 in 1506, ID=1 in 1048 (3*4 4*3)
         // repeat (4254) //single core (3*4 4*3)
         // repeat (2422) //dual core (3*4 4*3)
-        repeat (1506) //quad core (3*4 4*3)
+        repeat (5506) //quad core (3*4 4*3)
 
         #10 clk = ~clk;
         $stop;
